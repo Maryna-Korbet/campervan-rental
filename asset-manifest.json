@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-homework-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.7acaea2f.css.map": "/react-homework-template/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
+    "main.css": "/campervan-rental/static/css/main.7acaea2f.css",
+    "main.js": "/campervan-rental/static/js/main.93ad62e6.js",
+    "index.html": "/campervan-rental/index.html",
+    "main.7acaea2f.css.map": "/campervan-rental/static/css/main.7acaea2f.css.map",
+    "main.93ad62e6.js.map": "/campervan-rental/static/js/main.93ad62e6.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.93ad62e6.js"
   ]
 }
