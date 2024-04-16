@@ -1,4 +1,3 @@
-@import-normalize; 
 *,
 *::before,
 *::after {
@@ -17,3 +16,42 @@
   clip-path: inset(50%);
   margin: -1px;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+

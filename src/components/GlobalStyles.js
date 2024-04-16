@@ -19,26 +19,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
     }
-    h1,h2,h3,h4,h5,h6,p {
-        margin: 0;
-    }
-    ul, ol {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    li {
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-    }
-    img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
 `;
 
 export const Container = styled.div`
@@ -75,8 +55,6 @@ export const ClassicButton = styled.button`
     justify-content: center;
     align-items: center;
     font-style: normal;
-  /*   min-width: 130px;
-    min-height: 40px; */
     padding: 8px 30px;
 
     gap: 10px;
@@ -102,16 +80,29 @@ export const ClassicButton = styled.button`
     }
 
     @media only screen and (max-width: 768px) {
-    /*     min-width: 150px;
-        min-height: 50px; */
         padding: 10px 40px;
         font-size: ${p => p.theme.fontSizes.s};
     }
 
     @media (min-width: 768px) {
-    /*     min-width: Hug (160px)px;
-        min-height: Hug (56px)px; */
         padding: 16px 60px;
+    }
+`;
+
+export const Button = styled.button`
+    padding: 16px 32px;
+    gap: 10px;
+    border-radius: ${p => p.theme.radius.l};
+    border: ${p => `${p.theme.borders.normal} ${p.theme.colors.borderButton}`};
+    opacity: 0px;
+
+    font-size: ${p => p.theme.fontSizes.s};
+    font-weight: ${p => p.theme.fontWeights.medium};
+    line-height: ${p => p.theme.lineHeights.main};
+    letter-spacing: -0.005em;
+
+    &:hover, &:focus, &:active {
+        
     }
 `;
 
@@ -133,7 +124,6 @@ export const ClassicFormStyle = styled.form`
     width: Hug (448px)px;
     height: Hug (532px)px;
     margin: 0 auto;
-    /* padding: 24px 0px 0px 0px; */
     padding: 24px 24px;
     border: ${p => `${p.theme.borders.normal} ${p.theme.colors.border}`};
     border-radius: ${p => p.theme.radius.s};
@@ -163,8 +153,6 @@ export const ClassicTextForm = styled.p`
 export const ClassicInputForm = styled.input`
     display: block;
     width: Hug (400px)px;
- /*    height: Hug (56px)px; */
-    /* padding: 18px 341px 18px 18px; */
     padding: 18px 18px;
     gap: 10px;
     border-radius: ${p => p.theme.radius.s};
@@ -179,7 +167,6 @@ export const ClassicTextareaForm = styled.textarea`
     display: block;
     width: Hug (400px)px;
     height: Hug (114px)px;
- /*    padding: 18px 308px 76px 18px; */
     padding: 18px 18px;
     border-radius: ${p => p.theme.radius.s};
     opacity: ${p => p.theme.opacity.none};

@@ -1,5 +1,6 @@
 export const theme = {
     backgroundColor: {
+        main: '#FFFFFF',
         button: '#E44848',
         buttonActive: '#D84343',
         input: '#F7F7F7',
@@ -13,6 +14,7 @@ export const theme = {
         buttonText: '#FFFFFF',
 
         border: '#10182833',
+        borderButton:' #47546733',
         label: '#10182899',
     },
     fonts: {

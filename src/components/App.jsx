@@ -1,13 +1,19 @@
-import { Container, GlobalStyle } from "./GlobalStyles";
+import { Outlet } from 'react-router-dom';
+import { GlobalStyle } from './GlobalStyles';
+import { AppHeader } from './AppHeader/AppHeader';
 
-export const App = () => {
+
+function App() {
+
   return (
-    <>
-      <GlobalStyle />
-      <Container>
-        <p>Campervan Rental</p>
-      </Container>
-    </>
+  <>
+    <GlobalStyle />
+    <AppHeader />
+      <main>
+        <Outlet />
+    </main>
+  </>
   );
-};
+}
 
+export default App;
