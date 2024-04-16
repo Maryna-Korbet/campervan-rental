@@ -12,6 +12,7 @@ export const theme = {
         rating: '#FFC531',
         text: '#475467',
         buttonText: '#FFFFFF',
+        accent: '#E44848',
 
         border: '#10182833',
         borderButton:' #47546733',

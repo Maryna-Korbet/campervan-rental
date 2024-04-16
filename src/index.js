@@ -4,11 +4,13 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 import { lazy } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { LinearProgress } from '@mui/material';
 import App  from 'components/App';
 import 'normalize.css';
 import './index.css';
 import { theme } from 'components/theme';
 import StatefulAuth0Provider from 'auth/StatefulAuth0Provider';
+import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
 
 
 const HomePage = lazy(() => import('pages/HomePage'));
@@ -21,8 +23,10 @@ function AppEntrypoint() {
   return (
     <StatefulAuth0Provider>
       <ThemeProvider theme={theme}>
-     {/*  <Provider store={store}> */}
-        <App />
+        {/*  <Provider store={store}> */}
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
       {/*   </Provider> */}
       </ThemeProvider>
     </StatefulAuth0Provider>
@@ -36,25 +40,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <React.Suspense fallback={null}>
+        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
                   <HomePage />
                 </React.Suspense>,
       },
       {
         path: 'catalog',
-        element: <React.Suspense fallback={null}>
+        element: <React.Suspense fallback={<LinearProgress ccolor='accent' sx={{ mt: 3 }} />}>
                   <CatalogPage />
                 </React.Suspense>,
       },
       {
         path: 'favorites',
-        element: <React.Suspense fallback={null}>
+        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
                   <FavoritesPage />
                 </React.Suspense>,
       },
       {
         path: '*',  
-        element: <React.Suspense fallback={null}>
+        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
                   <NotFoundPage />
                 </React.Suspense>, 
       },

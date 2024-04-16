@@ -68,7 +68,7 @@ export const AppHeaderLogo = styled.div`
 export const NavigationLinkContainer = styled.nav`
     all: unset;
     display: flex;
-    gap:20px;
+    gap: 20px;
     font-size: ${p => p.theme.fontSizes.m};
     font-weight: ${p => p.theme.fontWeights.semiBold};
     line-height: ${p => p.theme.lineHeights.h2};
