@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
-export const AppHeaderContainer = styled.div`
+
+export const AppHeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -65,7 +65,7 @@ export const AppHeaderLogo = styled.div`
     }
 `;
 
-export const NavigationLinkContainer = styled.div`
+export const NavigationLinkContainer = styled.nav`
     all: unset;
     display: flex;
     gap:20px;
@@ -78,7 +78,7 @@ export const NavigationLinkContainer = styled.div`
     }
 `
 
-export const NavigationItem = styled(NavLink)`  
+export const NavigationItem = styled.div`  
     text-transform: uppercase;
 `
 
