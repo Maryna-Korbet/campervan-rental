@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/389.6a543d50.chunk.js","mappings":"kLAAe,SAASA,IACpB,OAAOC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,cAChB,C","sources":["auth/AuthCallback.jsx"],"sourcesContent":["export default function AuthCallback() { \n    return <div>Loading...</div>;\n}"],"names":["AuthCallback","_jsx","children"],"sourceRoot":""}
