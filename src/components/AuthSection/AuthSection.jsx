@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { LogButton } from './AuthSection.styled.js';
+import { LogButton, AvatarUser, AvatarImage, Login } from './AuthSection.styled.js';
 import { Button } from '../GlobalStyles';
 import configuration from 'configuration/configuration.js';
 
@@ -25,10 +25,14 @@ export function AuthSection() {
 
     if (isAuthenticated) {
         return (
-            <LogButton>
-                <p>{user?.name}</p>
-                <Button onClick={onLogOut}>Log Out</Button>
-            </LogButton>
+            <Login>
+                <AvatarUser>
+                    <AvatarImage src={user?.picture} alt={user?.name} />
+                </AvatarUser>
+                <LogButton>
+                    <Button onClick={onLogOut}>Log Out</Button>
+                </LogButton>
+            </Login> 
         )
     }
     return (

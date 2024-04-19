@@ -1,3 +1,5 @@
+import { LinearProgress } from "@mui/material";
+
 export default function AuthCallback() { 
-    return <div>Loading...</div>;
+    return <LinearProgress color='primary' sx={{ mt: 1 }} />;
 }

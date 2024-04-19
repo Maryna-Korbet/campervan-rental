@@ -102,7 +102,7 @@ export const Button = styled.button`
     letter-spacing: -0.005em;
 
     &:hover, &:focus, &:active {
-        
+        /* backgroundColor: ${p => p.theme.backgroundColor.buttonActive}; */
     }
 `;
 

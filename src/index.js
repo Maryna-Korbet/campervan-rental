@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { lazy } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { LinearProgress } from '@mui/material';
+import { store } from './redux/store';
 import App  from 'components/App';
 import 'normalize.css';
 import './index.css';
 import { theme } from 'components/theme';
 import StatefulAuth0Provider from 'auth/StatefulAuth0Provider';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
+// import LinearProgress from 'components/LinearProgress/LinearProgress';
 
 
 const HomePage = lazy(() => import('pages/HomePage'));
@@ -23,11 +24,11 @@ function AppEntrypoint() {
   return (
     <StatefulAuth0Provider>
       <ThemeProvider theme={theme}>
-        {/*  <Provider store={store}> */}
-        <ErrorBoundary>
-          <App />
+          <ErrorBoundary>
+            <Provider store={store}>
+            <App />
+            </Provider>
         </ErrorBoundary>
-      {/*   </Provider> */}
       </ThemeProvider>
     </StatefulAuth0Provider>
   );
@@ -40,25 +41,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
+        element: <React.Suspense fallback={null}>
                   <HomePage />
                 </React.Suspense>,
       },
       {
         path: 'catalog',
-        element: <React.Suspense fallback={<LinearProgress ccolor='accent' sx={{ mt: 3 }} />}>
+        element: <React.Suspense fallback={null}>
                   <CatalogPage />
                 </React.Suspense>,
       },
       {
         path: 'favorites',
-        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
+        element: <React.Suspense fallback={null}>
                   <FavoritesPage />
                 </React.Suspense>,
       },
       {
         path: '*',  
-        element: <React.Suspense fallback={<LinearProgress color='accent' sx={{ mt: 3 }} />}>
+        element: <React.Suspense fallback={null}>
                   <NotFoundPage />
                 </React.Suspense>, 
       },
@@ -74,6 +75,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(
   document.getElementById('root')  
 );
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

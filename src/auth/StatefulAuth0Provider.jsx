@@ -23,3 +23,4 @@ export default function StatefulAuth0Provider({ children }) {
         </Auth0Provider>
     )
 }
+

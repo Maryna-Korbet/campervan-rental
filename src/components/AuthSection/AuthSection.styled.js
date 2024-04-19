@@ -25,19 +25,36 @@ export const AuthButton = styled.button`
     }
 `;
 
+export const Login = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 4px;
+`;
+
 export const LogButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
 
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.medium};
     line-height: ${p => p.theme.lineHeights.main};
     letter-spacing: -0.005em;
+`;
 
-    button{
-        padding: 10px 32px;
-    }
-`
+export const AvatarUser = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: ${p => p.theme.borders.normal};
+    border-color: ${p => p.theme.backgroundColor.main};
+    cursor: pointer;
+`;
 
+export const AvatarImage = styled.img`
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+`;
