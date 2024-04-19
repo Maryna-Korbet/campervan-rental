@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -14,23 +14,19 @@ export const GlobalStyle = createGlobalStyle`
     #root {
         height: 100vh;
     }
-    
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-    }
 `;
 
-export const Container = styled.div`
-    padding: 40px 16px;
+export const PageContainer = styled.div`
+    padding: 140px 16px;
 
     @media (min-width: 768px) {
-        padding: 0px 32px;
+        padding: 190px 32px;
     }
     @media (min-width: 1280px) {
-        padding: 0px 64px;
+        padding: 230px 64px;
     }
 `;
+
 
 export const MainTitle = styled.h1`
     text-align: left;
@@ -50,59 +46,22 @@ export const SecondTitle = styled.h2`
     color: ${p => p.theme.colors.main};
 `;
 
-export const ClassicButton = styled.button`
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-style: normal;
-    padding: 8px 30px;
-
-    gap: 10px;
-    border-radius: ${p => p.theme.radius.l};
-    opacity: ${p => p.theme.opacity.none};
-
-    font-family: ${p => p.theme.fonts.main};
-    font-size: ${p => p.theme.fontSizes.sx};
-    font-weight: ${p => p.theme.fontWeights.medium};
-    line-height: ${p => p.theme.lineHeights.button};
-    letter-spacing: ${p => p.theme.letterSpacing.button};
-    text-align: left;
-
-    background-color: ${p => p.theme.backgroundColor.button};
-    color: ${p => p.theme.colors.buttonText};
-
-    transition: ${p => p.theme.transition.cubicBezier};
-    transform: ${p => p.theme.transform.scaleSecond};
-    cursor: pointer;
-
-    &:hover {
-        background-color: ${p => p.theme.backgroundColor.buttonActive};
-    }
-
-    @media only screen and (max-width: 768px) {
-        padding: 10px 40px;
-        font-size: ${p => p.theme.fontSizes.s};
-    }
-
-    @media (min-width: 768px) {
-        padding: 16px 60px;
-    }
-`;
-
 export const Button = styled.button`
-    padding: 16px 32px;
+    padding: 16px 40px;
     gap: 10px;
     border-radius: ${p => p.theme.radius.l};
-    border: ${p => `${p.theme.borders.normal} ${p.theme.colors.borderButton}`};
     opacity: 0px;
-
+    font-family: "Inter", sans-serif;
+    background-color: ${p => p.theme.backgroundColor.button};
+    font-family: ${p => p.theme.fonts.main};
+    color: ${p => p.theme.colors.buttonText};
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.medium};
     line-height: ${p => p.theme.lineHeights.main};
-    letter-spacing: -0.005em;
+    letter-spacing: -0.5%;
 
     &:hover, &:focus, &:active {
-        /* backgroundColor: ${p => p.theme.backgroundColor.buttonActive}; */
+        background-color: ${p => p.theme.backgroundColor.buttonActive};
     }
 `;
 
@@ -139,7 +98,8 @@ export const ClassicHeaderForm = styled.h3`
 
     color: ${p => p.theme.colors.main};
     margin-bottom: 8px;
-`
+`;
+
 export const ClassicTextForm = styled.p`
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.regular};
@@ -148,7 +108,7 @@ export const ClassicTextForm = styled.p`
 
     color: ${p => p.theme.colors.text};
     margin-bottom: 8px;
-`
+`;
 
 export const ClassicInputForm = styled.input`
     display: block;
@@ -187,9 +147,6 @@ export const ClassicLabelForm = styled.label`
     line-height: ${p => p.theme.lineHeights.text};
     color: ${p => p.theme.colors.label};
 `;
-
-
-
 
 
 

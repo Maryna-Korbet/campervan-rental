@@ -4,6 +4,7 @@ import { selectIsLoading, selectIsError } from '../redux/adverts/selectors';
 import AdvertsList from '../components/AdvertsList/AdvertsList';
 import { getAllAdvartsOperation } from '../redux/adverts/operations';
 import { LinearProgress } from '@mui/material';
+import { PageContainer } from '../components/GlobalStyles';
 
 
 const HomePage = () => {
@@ -16,11 +17,11 @@ const HomePage = () => {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>Home Page</h1>
+        <PageContainer>
+            <h1 hidden>Home Page</h1>
             <div>{isLoading && !isError && <LinearProgress color='primary' sx={{ mt: 1 }} />}</div>
             <AdvertsList />
-        </div>
+        </PageContainer>
     );
 };
 

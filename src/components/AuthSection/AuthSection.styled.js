@@ -1,45 +1,30 @@
 import styled from 'styled-components';
 
-export const AuthButton = styled.button`
-    display:flex;
-    justify-content: center;
+export const AuthButton = styled.div`
+    display: flex;
     align-items: center;
-    font-style: normal;
-    padding: 4px 24px;
-
+    border: ${p => p.theme.borders.normal};
     border-radius: ${p => p.theme.radius.l};
-    opacity: ${p => p.theme.opacity.none};
+    border-color: ${p => p.theme.backgroundColor.main};
 
-    font-family: ${p => p.theme.fonts.main};
-    font-size: ${p => p.theme.fontSizes.sx};
-    font-weight: ${p => p.theme.fontWeights.medium};
-    line-height: ${p => p.theme.lineHeights.button};
-    letter-spacing: ${p => p.theme.letterSpacing.button};
-
-    transition: ${p => p.theme.transition.cubicBezier};
-    transform: ${p => p.theme.transform.scaleSecond};
-    cursor: pointer;
-
-    &:hover {
-        background-color: ${p => p.theme.backgroundColor.buttonHover};
+    &:hover, &:focus, &:active {
+        background-color: ${p => p.theme.backgroundColor.buttonActive};
+        border: ${p => `${p.theme.borders.button} ${p.theme.colors.border}`};
     }
 `;
 
 export const Login = styled.div`
     display: flex;
     align-items: center;
-    gap: 4px;
+    background-color: ${p => p.theme.backgroundColor.button};
+    font-family: "Inter", sans-serif;
 `;
 
 export const LogButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: ${p => p.theme.fontSizes.s};
-    font-weight: ${p => p.theme.fontWeights.medium};
-    line-height: ${p => p.theme.lineHeights.main};
-    letter-spacing: -0.005em;
+    background-color: ${p => p.theme.backgroundColor.button};
 `;
 
 export const AvatarUser = styled.div`

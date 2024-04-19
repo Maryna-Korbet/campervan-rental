@@ -69,6 +69,7 @@ export const NavigationLinkContainer = styled.nav`
     all: unset;
     display: flex;
     gap: 20px;
+    font-family: "Inter", sans-serif;
     font-size: ${p => p.theme.fontSizes.m};
     font-weight: ${p => p.theme.fontWeights.semiBold};
     line-height: ${p => p.theme.lineHeights.h2};
@@ -79,6 +80,8 @@ export const NavigationLinkContainer = styled.nav`
 `
 
 export const NavigationItem = styled.div`  
+    text-decoration: none;
     text-transform: uppercase;
+    color: ${p => p.theme.colors.buttonText};
 `
 

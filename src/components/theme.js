@@ -46,6 +46,7 @@ export const theme = {
     borders: {
         none: 'none',
         normal: '1px solid',
+        button: '2px solid',
     },  
     radius: {
         none: '0',
@@ -71,6 +72,11 @@ export const theme = {
         scaleFirst: 'scale(1.07)',
         scaleSecond: 'scale(1.1)',
     },
+    padding: {
+        s: '16px, 32px, 16px, 32px',
+        m: '16px, 40px, 16px, 40px',
+        l: '16px, 60px, 16px, 60px',
+    }
 };
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { LogButton, AvatarUser, AvatarImage, Login } from './AuthSection.styled.js';
+import { AvatarUser, AvatarImage, Login, AuthButton} from './AuthSection.styled.js';
 import { Button } from '../GlobalStyles';
 import configuration from 'configuration/configuration.js';
 
@@ -29,16 +29,16 @@ export function AuthSection() {
                 <AvatarUser>
                     <AvatarImage src={user?.picture} alt={user?.name} />
                 </AvatarUser>
-                <LogButton>
+                <AuthButton>
                     <Button onClick={onLogOut}>Log Out</Button>
-                </LogButton>
+                </AuthButton>
             </Login> 
         )
     }
     return (
-        <LogButton>
+        <AuthButton>
             <Button onClick={onLogin}>Log In</Button>
-        </LogButton>
+        </AuthButton>
         )
 } 
 
