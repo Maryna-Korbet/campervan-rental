@@ -8,13 +8,13 @@ function App() {
 
   return (
     <>
-    <CssBaseline />
-    <GlobalStyle />
-    <AppHeader />
-      <main>
-        <Outlet />
-      </main>
-  </>
+      <CssBaseline />
+      <GlobalStyle />
+      <AppHeader />
+        <main>
+          <Outlet />
+        </main>
+    </>
   );
 }
 

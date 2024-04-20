@@ -6,14 +6,14 @@ import { AppHeader } from '../AppHeader/AppHeader';
 
 export const Layout = () => {
     return (
-        <React.Fragment>
+        <>
             <AppHeader />
 
             <Suspense fallback={null}>
             <Outlet />
             </Suspense>
 
-        </React.Fragment>
+        </>
     );
 };
 

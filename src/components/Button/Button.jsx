@@ -1,6 +1,5 @@
-import { ButtonBox } from './Button.styled'
-
 import React from 'react';
+import { ButtonBox } from './Button.styled'
 
 const Button = ({ type, onClick }) => {
   let action, label;
@@ -22,12 +21,12 @@ const Button = ({ type, onClick }) => {
       label = 'Send';
       action = 'submit';
       break;
-    case 'Show More':
-      label = 'Show More';
+    case 'Show more':
+      label = 'Show more';
       action = 'button';
       break; 
     case 'Load':
-      label = 'Load More';
+      label = 'Load more';
       action = 'button';
       break;
     default:
@@ -43,10 +42,3 @@ const Button = ({ type, onClick }) => {
 };
 
 export default Button;
-
-
-{/* isLoading
-                            ? (<LinearProgress color='primary' sx={{ mt: 1 }} />)
-                            : (
-                               
-                            )} */

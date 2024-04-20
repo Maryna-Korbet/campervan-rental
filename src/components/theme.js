@@ -4,6 +4,7 @@ export const theme = {
         button: '#E44848',
         buttonActive: '#D84343',
         input: '#F7F7F7',
+        details: '#F2F4F7',
     },
     colors: {
         main: '#101828',
@@ -53,6 +54,7 @@ export const theme = {
         s: '10px',
         m: '20px',
         l: '200px',
+        xl: '100px',
     },
     opacity: {
         none: '0',
