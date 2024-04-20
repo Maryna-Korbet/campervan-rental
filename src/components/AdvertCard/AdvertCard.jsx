@@ -24,8 +24,7 @@ import {
     DetailsText,
     DetailsIcon,
 } from './AdvertCard.styled';
-import Button from 'components/Button/Button';
-import { MainTitle } from 'components/GlobalStyles';
+import { MainTitle, Button } from 'components/GlobalStyles';
 
 const AdvertCard = ({ advert }) => {
     const {
@@ -130,8 +129,11 @@ const AdvertCard = ({ advert }) => {
                             </DescriptionDetails>
                     </AdvertDescriptionDetails>
 
-                    {!showMore && (
-                        <Button type="Show more" onClick={() => setShowMore(true)} />
+                    {!showMore && ( 
+                        <div>
+                            <Button type="button" onClick={() => setShowMore(true)}>Show more</Button>
+                        </div>
+                                    
                     )}
                     
                     </AdvertCardInfo>

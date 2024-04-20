@@ -1,28 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectIsError } from '../redux/adverts/selectors';
-import AdvertsList from '../components/AdvertsList/AdvertsList';
+import { selectIsLoading, selectIsError, selectAdverts } from '../redux/adverts/selectors';
 import { getAllAdvartsOperation } from '../redux/adverts/operations';
+import AdvertsList from '../components/AdvertsList/AdvertsList';
 import { LinearProgress } from '@mui/material';
-import Button from '../components/Button/Button';
-import { PageContainer } from '../components/GlobalStyles';
+import { PageContainer, LoadMoreButton } from '../components/GlobalStyles';
+import { HomePageContent } from './HomePage.styled'
+
 
 
 const HomePage = () => {
     const dispatch = useDispatch();
     const isLoading = useSelector(selectIsLoading);
     const isError = useSelector(selectIsError);
+    const adverts = useSelector(selectAdverts);
+    const [loadedCount, setLoadedCount] = useState(4);
 
     useEffect(() => {
         dispatch(getAllAdvartsOperation()); 
     }, [dispatch]);
 
+    const handleLoadMore = () => {
+        setLoadedCount(prevCount => prevCount + 4);
+    };
+
     return (
         <PageContainer>
             <h1 hidden>Home Page</h1>
             <div>{isLoading && !isError && <LinearProgress color='primary' sx={{ mt: 1 }} />}</div>
-            <AdvertsList />
-            <Button type="Load" />
+            
+            <HomePageContent>
+            <AdvertsList loadedCount={loadedCount} />
+
+            {!isLoading && !isError && adverts.length > loadedCount &&
+                (<div><LoadMoreButton type="button" onClick={handleLoadMore}>Load more</LoadMoreButton></div>)
+                
+            }
+            </HomePageContent>
         </PageContainer>
     );
 };

@@ -48,9 +48,7 @@ export const SecondTitle = styled.h2`
 
 export const Button = styled.button`
     padding: 16px 40px;
-    gap: 10px;
     border-radius: ${p => p.theme.radius.l};
-    opacity: 0px;
     font-family: "Inter", sans-serif;
     background-color: ${p => p.theme.backgroundColor.button};
     font-family: ${p => p.theme.fonts.main};
@@ -60,10 +58,87 @@ export const Button = styled.button`
     line-height: ${p => p.theme.lineHeights.main};
     letter-spacing: -0.5%;
 
-    &:hover, &:focus, &:active {
+    &:hover {
         background-color: ${p => p.theme.backgroundColor.buttonActive};
     }
 `;
+
+export const LoadMoreButton = styled.button`
+    font-family: "Inter", sans-serif;
+    font-size: ${p => p.theme.fontSizes.s};
+    font-weight: ${p => p.theme.fontWeights.medium};
+    line-height: ${p => p.theme.lineHeights.main};
+    letter-spacing: ${p => p.theme.letterSpacing.button};
+    color: ${p => p.theme.colors.main};
+    margin-top: 50px;
+    width: 166px;
+    height: 56px;
+
+
+    padding: 16px, 32px, 16px, 32px;
+    border-radius: ${p => p.theme.radius.l};
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.borderButton};
+
+    &:hover {
+        border-color: ${p => p.theme.backgroundColor.button};
+    }
+`;
+
+export const ClassicButton = styled.button`
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    padding: 8px 30px;
+
+    gap: 10px;
+    border-radius: ${p => p.theme.radius.l};
+    opacity: ${p => p.theme.opacity.none};
+
+    font-family: ${p => p.theme.fonts.main};
+    font-size: ${p => p.theme.fontSizes.sx};
+    font-weight: ${p => p.theme.fontWeights.medium};
+    line-height: ${p => p.theme.lineHeights.button};
+    letter-spacing: ${p => p.theme.letterSpacing.button};
+    text-align: left;
+
+    background-color: ${p => p.theme.backgroundColor.button};
+    color: ${p => p.theme.colors.buttonText};
+
+    transition: ${p => p.theme.transition.cubicBezier};
+    transform: ${p => p.theme.transform.scaleSecond};
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${p => p.theme.backgroundColor.buttonActive};
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 10px 40px;
+        font-size: ${p => p.theme.fontSizes.s};
+    }
+
+    @media (min-width: 768px) {
+        padding: 16px 60px;
+    }
+`;
+
+
+
+// export const ShowMoreButton = styled.button`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-family: ${p => p.theme.fonts.main};
+//     padding: ${p => p.theme.padding.m};
+//     border-radius: ${p => p.theme.radius.l};
+//     background-color: ${p => p.theme.backgroundColor.button};
+//     width: 166px;
+//     height: 56px;
+//         &:hover, &:focus, &:active {
+//             background-color: ${p => p.theme.backgroundColor.buttonActive};
+//         }
+// `;
 
 export const ContentImage = styled.img`
     display: block;
