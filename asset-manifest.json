@@ -1,27 +1,25 @@
 {
   "files": {
     "main.css": "/campervan-rental/static/css/main.7dfe89a6.css",
-    "main.js": "/campervan-rental/static/js/main.f83cc2a8.js",
-    "static/js/983.0785d466.chunk.js": "/campervan-rental/static/js/983.0785d466.chunk.js",
+    "main.js": "/campervan-rental/static/js/main.06ad9145.js",
+    "static/js/112.552034bd.chunk.js": "/campervan-rental/static/js/112.552034bd.chunk.js",
     "static/js/69.31ce418b.chunk.js": "/campervan-rental/static/js/69.31ce418b.chunk.js",
-    "static/js/697.9dbbaa6c.chunk.js": "/campervan-rental/static/js/697.9dbbaa6c.chunk.js",
+    "static/js/697.a251b39c.chunk.js": "/campervan-rental/static/js/697.a251b39c.chunk.js",
     "static/js/520.82d0f71c.chunk.js": "/campervan-rental/static/js/520.82d0f71c.chunk.js",
     "static/js/389.138b550c.chunk.js": "/campervan-rental/static/js/389.138b550c.chunk.js",
     "static/js/553.c58b6369.chunk.js": "/campervan-rental/static/js/553.c58b6369.chunk.js",
-    "static/js/636.cb9537cc.chunk.js": "/campervan-rental/static/js/636.cb9537cc.chunk.js",
     "index.html": "/campervan-rental/index.html",
     "main.7dfe89a6.css.map": "/campervan-rental/static/css/main.7dfe89a6.css.map",
-    "main.f83cc2a8.js.map": "/campervan-rental/static/js/main.f83cc2a8.js.map",
-    "983.0785d466.chunk.js.map": "/campervan-rental/static/js/983.0785d466.chunk.js.map",
+    "main.06ad9145.js.map": "/campervan-rental/static/js/main.06ad9145.js.map",
+    "112.552034bd.chunk.js.map": "/campervan-rental/static/js/112.552034bd.chunk.js.map",
     "69.31ce418b.chunk.js.map": "/campervan-rental/static/js/69.31ce418b.chunk.js.map",
-    "697.9dbbaa6c.chunk.js.map": "/campervan-rental/static/js/697.9dbbaa6c.chunk.js.map",
+    "697.a251b39c.chunk.js.map": "/campervan-rental/static/js/697.a251b39c.chunk.js.map",
     "520.82d0f71c.chunk.js.map": "/campervan-rental/static/js/520.82d0f71c.chunk.js.map",
     "389.138b550c.chunk.js.map": "/campervan-rental/static/js/389.138b550c.chunk.js.map",
-    "553.c58b6369.chunk.js.map": "/campervan-rental/static/js/553.c58b6369.chunk.js.map",
-    "636.cb9537cc.chunk.js.map": "/campervan-rental/static/js/636.cb9537cc.chunk.js.map"
+    "553.c58b6369.chunk.js.map": "/campervan-rental/static/js/553.c58b6369.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7dfe89a6.css",
-    "static/js/main.f83cc2a8.js"
+    "static/js/main.06ad9145.js"
   ]
 }
