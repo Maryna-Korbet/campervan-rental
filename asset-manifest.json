@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/campervan-rental/static/css/main.7dfe89a6.css",
-    "main.js": "/campervan-rental/static/js/main.889c8178.js",
-    "static/js/62.8c44b487.chunk.js": "/campervan-rental/static/js/62.8c44b487.chunk.js",
+    "main.js": "/campervan-rental/static/js/main.26a2569f.js",
+    "static/js/112.dba8f08e.chunk.js": "/campervan-rental/static/js/112.dba8f08e.chunk.js",
     "static/js/69.31ce418b.chunk.js": "/campervan-rental/static/js/69.31ce418b.chunk.js",
     "static/js/697.a251b39c.chunk.js": "/campervan-rental/static/js/697.a251b39c.chunk.js",
     "static/js/520.82d0f71c.chunk.js": "/campervan-rental/static/js/520.82d0f71c.chunk.js",
@@ -10,8 +10,8 @@
     "static/js/553.c58b6369.chunk.js": "/campervan-rental/static/js/553.c58b6369.chunk.js",
     "index.html": "/campervan-rental/index.html",
     "main.7dfe89a6.css.map": "/campervan-rental/static/css/main.7dfe89a6.css.map",
-    "main.889c8178.js.map": "/campervan-rental/static/js/main.889c8178.js.map",
-    "62.8c44b487.chunk.js.map": "/campervan-rental/static/js/62.8c44b487.chunk.js.map",
+    "main.26a2569f.js.map": "/campervan-rental/static/js/main.26a2569f.js.map",
+    "112.dba8f08e.chunk.js.map": "/campervan-rental/static/js/112.dba8f08e.chunk.js.map",
     "69.31ce418b.chunk.js.map": "/campervan-rental/static/js/69.31ce418b.chunk.js.map",
     "697.a251b39c.chunk.js.map": "/campervan-rental/static/js/697.a251b39c.chunk.js.map",
     "520.82d0f71c.chunk.js.map": "/campervan-rental/static/js/520.82d0f71c.chunk.js.map",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.7dfe89a6.css",
-    "static/js/main.889c8178.js"
+    "static/js/main.26a2569f.js"
   ]
 }
