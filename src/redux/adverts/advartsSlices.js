@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllAdvartsOperation } from "./operations";
+import { getAllAdvartsOperation } from "./advartsOperations";
 
 const handlePending = (state) => {
     state.isLoading = true;
@@ -17,11 +17,6 @@ const advertsSlice = createSlice({
         isError: null,
         nextPage: 1, 
     },
-    reducers: {
-        loadMore: (state) => {
-            state.nextPage++; 
-        },
-    },
     extraReducers: builder => {
         builder
             .addCase(getAllAdvartsOperation.pending, handlePending)
@@ -34,7 +29,4 @@ const advertsSlice = createSlice({
     },
 });
 
-export const { loadMore } = advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;
-
-

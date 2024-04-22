@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export const AdvertCardContainer = styled.div`
+export const AdvertCardContainer = styled.li`
     display: flex;
     padding: 24px;  
     border-radius: ${p => p.theme.radius.m};
@@ -129,5 +131,14 @@ export const DetailsText = styled.span`
     text-transform: capitalize;
 `; 
 
+export const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
+        width: 24px;
+        height: 24px;
+`;
 
+export const StyledFavoriteIcon = styled(FavoriteIcon)`
+        width: 24px;
+        height: 24px;
+        color: ${p => p.theme.colors.accentColor};
+`;
 

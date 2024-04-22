@@ -123,22 +123,20 @@ export const ClassicButton = styled.button`
     }
 `;
 
-
-
-// export const ShowMoreButton = styled.button`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-family: ${p => p.theme.fonts.main};
-//     padding: ${p => p.theme.padding.m};
-//     border-radius: ${p => p.theme.radius.l};
-//     background-color: ${p => p.theme.backgroundColor.button};
-//     width: 166px;
-//     height: 56px;
-//         &:hover, &:focus, &:active {
-//             background-color: ${p => p.theme.backgroundColor.buttonActive};
-//         }
-// `;
+export const ShowMoreButton = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ${p => p.theme.fonts.main};
+    padding: ${p => p.theme.padding.m};
+    border-radius: ${p => p.theme.radius.l};
+    background-color: ${p => p.theme.backgroundColor.button};
+    width: 166px;
+    height: 56px;
+        &:hover, &:focus, &:active {
+            background-color: ${p => p.theme.backgroundColor.buttonActive};
+        }
+`;
 
 export const ContentImage = styled.img`
     display: block;
@@ -222,6 +220,8 @@ export const ClassicLabelForm = styled.label`
     line-height: ${p => p.theme.lineHeights.text};
     color: ${p => p.theme.colors.label};
 `;
+
+
 
 
 

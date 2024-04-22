@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectIsError, selectAdverts } from '../redux/adverts/selectors';
-import { getAllAdvartsOperation } from '../redux/adverts/operations';
+import { selectIsLoading, selectIsError, selectAdverts } from '../redux/adverts/advartsSelectors';
+import { getAllAdvartsOperation } from '../redux/adverts/advartsOperations';
 import AdvertsList from '../components/AdvertsList/AdvertsList';
 import { LinearProgress } from '@mui/material';
 import { PageContainer, LoadMoreButton } from '../components/GlobalStyles';
 import { HomePageContent } from './HomePage.styled'
-
 
 
 const HomePage = () => {

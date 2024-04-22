@@ -8,11 +8,13 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { advertsReducer } from './adverts/advartsSlice';
+import { advertsReducer } from './adverts/advartsSlices';
+import { favoritesReducer } from './favorites/favoritesSlices';
 
 export const store = configureStore({
   reducer: {
     adverts: advertsReducer,
+    favorites: favoritesReducer,
   },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({

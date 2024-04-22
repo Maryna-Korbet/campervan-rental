@@ -48,6 +48,7 @@ export const theme = {
         none: 'none',
         normal: '1px solid',
         button: '2px solid',
+        buttonFavorite: '2.3px solid',
     },  
     radius: {
         none: '0',
