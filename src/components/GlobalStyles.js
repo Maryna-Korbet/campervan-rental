@@ -17,6 +17,9 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 140px 16px;
 
     @media (min-width: 768px) {

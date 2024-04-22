@@ -5,7 +5,6 @@ import { getAllAdvartsOperation } from '../redux/adverts/advartsOperations';
 import AdvertsList from '../components/AdvertsList/AdvertsList';
 import { LinearProgress } from '@mui/material';
 import { PageContainer, LoadMoreButton } from '../components/GlobalStyles';
-import { HomePageContent } from './HomePage.styled'
 
 
 const HomePage = () => {
@@ -28,14 +27,13 @@ const HomePage = () => {
             <h1 hidden>Home Page</h1>
             <div>{isLoading && !isError && <LinearProgress color='primary' sx={{ mt: 1 }} />}</div>
             
-            <HomePageContent>
             <AdvertsList loadedCount={loadedCount} />
 
             {!isLoading && !isError && adverts.length > loadedCount &&
                 (<div><LoadMoreButton type="button" onClick={handleLoadMore}>Load more</LoadMoreButton></div>)
                 
             }
-            </HomePageContent>
+            
         </PageContainer>
     );
 };

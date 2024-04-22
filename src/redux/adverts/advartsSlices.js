@@ -22,7 +22,7 @@ const advertsSlice = createSlice({
             .addCase(getAllAdvartsOperation.pending, handlePending)
             .addCase(getAllAdvartsOperation.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.adverts = [...state.adverts, ...action.payload];
+                state.adverts = action.payload;
                 state.isError = null;
             })
             .addCase(getAllAdvartsOperation.rejected, handleRejected);

@@ -56,11 +56,6 @@ const AdvertCard = ({ advert, isFavorite }) => {
     const [showMore, setShowMore] = useState(false);
 
     const handleFavoriteToggle = () => {
-        if (!isAuthenticated) {
-        alert('This option is available only for logged in users.');
-        return;
-        }
-
         if (isFavorite) {
         dispatch(removeFavoriteAdvert(_id));
         } else {
