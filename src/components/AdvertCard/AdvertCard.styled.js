@@ -77,7 +77,7 @@ export const AdvertRatingInfo = styled.div`
 export const AdvertLocationSection = styled.div`
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
 `;
 
 export const AdvertLocation = styled.div`

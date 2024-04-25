@@ -5,6 +5,7 @@ export const theme = {
         buttonActive: '#D84343',
         input: '#F7F7F7',
         details: '#F2F4F7',
+        modal: '#11121366',
     },
     colors: {
         main: '#101828',

@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch } from 'react-redux';
 import { addFavoriteAdvert, removeFavoriteAdvert } from '../../redux/favorites/favoritesSlices';
@@ -26,53 +25,45 @@ import {
     DetailsText,
     DetailsIcon,
     StyledFavoriteBorderIcon,
-    StyledFavoriteIcon,
-} from './AdvertCard.styled';
+    StyledFavoriteIcon
+} from '../AdvertCard/AdvertCard.styled';
 import { MainTitle, Button } from 'components/GlobalStyles';
+import Modal from '../Modal/Modal';
+import DetailsCard from '../DetailsCard/DetailsCard';
 
 const AdvertCard = ({ advert, isFavorite }) => {
-    const {
-        _id,
-        name,
-        price,
-        rating,
-        location,
-        adults,
-        engine,
-        transmission,
-        description,
-        details: {
-            airConditioner,
-            kitchen,
-            beds,
-        },
-        gallery,
-        reviews,
-    } = advert;
 
     const dispatch = useDispatch();
     const { isAuthenticated } = useAuth0();
 
-    const [showMore, setShowMore] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleFavoriteToggle = () => {
         if (isFavorite) {
-        dispatch(removeFavoriteAdvert(_id));
+            dispatch(removeFavoriteAdvert(advert._id));
         } else {
-        dispatch(addFavoriteAdvert(_id));
+            dispatch(addFavoriteAdvert(advert._id));
         }
     };
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    }
 
     return (
         <AdvertCardContainer>
             <AdvertCardItem>
-                <AdvertCardImg src={gallery[0]} alt={name} />
+                <AdvertCardImg src={advert.gallery[0]} alt={advert.name} />
                     <AdvertCardInfo>
                         <AdvertMainInfo>
                             <AdvertMainSection>
-                                <MainTitle>{name}</MainTitle>
+                                <MainTitle>{advert.name}</MainTitle>
                                 <AdvertPriceSection>
-                                <AdvertPrice>&#8364;{parseFloat(price).toFixed(2)}</AdvertPrice>
+                                <AdvertPrice>&#8364;{parseFloat(advert.price).toFixed(2)}</AdvertPrice>
 
                                 {isAuthenticated && (
                                     <button type="button" onClick={handleFavoriteToggle}>
@@ -86,47 +77,47 @@ const AdvertCard = ({ advert, isFavorite }) => {
                                 <AdvertReviewSection>
                                     <StarIcon style={{ color: '#FFC531' }} />
                                     <AdvertRatingInfo>
-                                        <div>{rating}</div>
-                                        <div>&#10098;{reviews.length} Reviews</div>
+                                        <div>{advert.rating}</div>
+                                        <div>&#10098;{advert.reviews.length} Reviews</div>
                                     </AdvertRatingInfo>
                                 </AdvertReviewSection>
                                 <AdvertLocationSection>
                                     <PlaceIcon />
-                                    <AdvertLocation>{location}</AdvertLocation>
+                                    <AdvertLocation>{advert.location}</AdvertLocation>
                                 </AdvertLocationSection>
                             </AdvertSecondSection>
                     </AdvertMainInfo>
                     
                     <AdvertCardDescription>
-                        {description}&#8230;
+                        {advert.description}&#8230;
                     </AdvertCardDescription>
 
 
                         <AdvertDescriptionDetails>
                             <DescriptionDetails>
-                                {adults &&
+                                {advert.details.adults &&
                                     <Details>
                                         <DetailsIcon className="icon">
                                             <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>{adults} adults
+                                        </DetailsIcon>{advert.details.adults} adults
                                     </Details>
                                 }
-                                {transmission &&
+                                {advert.transmission &&
                                     <Details>
                                         <DetailsIcon>
                                             <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
                                         </DetailsIcon>
-                                        <DetailsText>{transmission}</DetailsText>
+                                        <DetailsText>{advert.transmission}</DetailsText>
                                     </Details>
                                 }
-                                {engine &&
+                                {advert.engine &&
                                     <Details>
                                         <DetailsIcon>
                                             <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon><DetailsText>{engine}</DetailsText>
+                                        </DetailsIcon><DetailsText>{advert.engine}</DetailsText>
                                     </Details>
                                 }
-                                {kitchen &&
+                                {advert.details.kitchen &&
                                     <Details>
                                         <DetailsIcon>
                                             <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
@@ -134,14 +125,14 @@ const AdvertCard = ({ advert, isFavorite }) => {
                                         <DetailsText>kitchen</DetailsText>
                                     </Details>
                                 }
-                                {beds &&
+                                {advert.details.beds &&
                                     <Details>
                                         <DetailsIcon>
                                             <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>{beds} beds
+                                        </DetailsIcon>{advert.details.beds} beds
                                     </Details>
                                 }
-                                {airConditioner &&
+                                {advert.details.airConditioner &&
                                     <Details>
                                         <DetailsIcon>
                                             <use xlinkHref="/src/icons/ac.svg"></use>
@@ -151,13 +142,17 @@ const AdvertCard = ({ advert, isFavorite }) => {
                             </DescriptionDetails>
                     </AdvertDescriptionDetails>
 
-                    {!showMore && (
                         <div>
-                            <Button type="button" onClick={() => setShowMore(true)}>Show more</Button>
+                            <Button type="button" onClick={openModal}>Show more</Button>
                         </div>
-                    )}
                     
-                    </AdvertCardInfo>
+                        {isModalOpen && (
+                            <Modal isCloseModal={closeModal}>
+                                <DetailsCard advert={advert} />
+                            </Modal>
+                        )}
+
+                </AdvertCardInfo>
             </AdvertCardItem>
         </AdvertCardContainer>
     );
