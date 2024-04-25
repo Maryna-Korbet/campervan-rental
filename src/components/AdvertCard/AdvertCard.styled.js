@@ -115,16 +115,6 @@ export const Details = styled.div`
     font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.medium};
     line-height: ${p => p.theme.lineHeights.text};
-
-    border : 1px solid #000;
-    box-sizing: border-box; 
-`;
-
-export const DetailsIcon = styled.svg`
-    display: block;  
-    width: 20px;
-    height: 20px;
-    border : 1px solid #000;
 `;
 
 export const DetailsText = styled.span` 

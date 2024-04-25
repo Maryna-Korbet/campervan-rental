@@ -20,16 +20,8 @@ export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 140px 16px;
-
-    @media (min-width: 768px) {
-        padding: 190px 32px;
-    }
-    @media (min-width: 1280px) {
-        padding: 230px 64px;
-    }
+    padding: 230px 64px;
 `;
-
 
 export const MainTitle = styled.h1`
     text-align: left;
@@ -77,7 +69,6 @@ export const LoadMoreButton = styled.button`
     width: 166px;
     height: 56px;
 
-
     padding: 16px, 32px, 16px, 32px;
     border-radius: ${p => p.theme.radius.l};
     border: ${p => p.theme.borders.normal} ${p => p.theme.colors.borderButton};
@@ -92,14 +83,14 @@ export const ClassicButton = styled.button`
     justify-content: center;
     align-items: center;
     font-style: normal;
-    padding: 8px 30px;
+    padding: 16px 60px;
 
     gap: 10px;
     border-radius: ${p => p.theme.radius.l};
     opacity: ${p => p.theme.opacity.none};
 
     font-family: ${p => p.theme.fonts.main};
-    font-size: ${p => p.theme.fontSizes.sx};
+    font-size: ${p => p.theme.fontSizes.s};
     font-weight: ${p => p.theme.fontWeights.medium};
     line-height: ${p => p.theme.lineHeights.button};
     letter-spacing: ${p => p.theme.letterSpacing.button};
@@ -115,15 +106,6 @@ export const ClassicButton = styled.button`
     &:hover {
         background-color: ${p => p.theme.backgroundColor.buttonActive};
     }
-
-    @media only screen and (max-width: 768px) {
-        padding: 10px 40px;
-        font-size: ${p => p.theme.fontSizes.s};
-    }
-
-    @media (min-width: 768px) {
-        padding: 16px 60px;
-    }
 `;
 
 export const ShowMoreButton = styled.button`
@@ -136,6 +118,7 @@ export const ShowMoreButton = styled.button`
     background-color: ${p => p.theme.backgroundColor.button};
     width: 166px;
     height: 56px;
+
         &:hover, &:focus, &:active {
             background-color: ${p => p.theme.backgroundColor.buttonActive};
         }
@@ -156,8 +139,8 @@ export const ClassicFormStyle = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: Hug (448px)px;
-    height: Hug (532px)px;
+    width: 448px;
+    height: 532px;
     margin: 0 auto;
     padding: 24px 24px;
     border: ${p => `${p.theme.borders.normal} ${p.theme.colors.border}`};
@@ -188,7 +171,7 @@ export const ClassicTextForm = styled.p`
 
 export const ClassicInputForm = styled.input`
     display: block;
-    width: Hug (400px)px;
+    width: 400px;
     padding: 18px 18px;
     gap: 10px;
     border-radius: ${p => p.theme.radius.s};
@@ -201,8 +184,8 @@ export const ClassicInputForm = styled.input`
 
 export const ClassicTextareaForm = styled.textarea`
     display: block;
-    width: Hug (400px)px;
-    height: Hug (114px)px;
+    width: 400px;
+    height: 114px;
     padding: 18px 18px;
     border-radius: ${p => p.theme.radius.s};
     opacity: ${p => p.theme.opacity.none};

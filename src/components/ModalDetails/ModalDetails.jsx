@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Features } from '../Features/Features';
 import { Reviews } from '../Reviews/Reviews';
 import {
-    FeaturesButton,
-    ReviewsButton,
-    DetailsButtons,
+    DetailsButtonContainer,
+    DetailsButton,
 } from './ModalDetails.styled';
 
 const ModalDetails = ({ advert }) => {
@@ -16,23 +15,23 @@ const ModalDetails = ({ advert }) => {
 
     return (
         <div>
-            <DetailsButtons>
-                <FeaturesButton
+            <DetailsButtonContainer>
+                <DetailsButton
                     type="button"
                     active={activeButton === 'features'}
                     onClick={() => handleButtonClick('features')}
                 >
                 Features
-                </FeaturesButton>
+                </DetailsButton>
                 
-                <ReviewsButton
+                <DetailsButton
                     type="button"
                     active={activeButton === 'reviews'}
                     onClick={() => handleButtonClick('reviews')}
                 >
                 Reviews
-                </ReviewsButton>
-            </DetailsButtons>
+                </DetailsButton>
+            </DetailsButtonContainer>
 
             <div>
                 {activeButton === 'features' ? (

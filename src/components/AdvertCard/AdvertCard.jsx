@@ -3,7 +3,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch } from 'react-redux';
 import { addFavoriteAdvert, removeFavoriteAdvert } from '../../redux/favorites/favoritesSlices';
 import StarIcon from '@mui/icons-material/Star';
-import PlaceIcon from '@mui/icons-material/Place';
 import {
     AdvertCardContainer,
     AdvertCardItem,
@@ -23,15 +22,16 @@ import {
     DescriptionDetails,
     Details,
     DetailsText,
-    DetailsIcon,
     StyledFavoriteBorderIcon,
     StyledFavoriteIcon
 } from '../AdvertCard/AdvertCard.styled';
 import { MainTitle, Button } from 'components/GlobalStyles';
 import Modal from '../Modal/Modal';
 import DetailsCard from '../DetailsCard/DetailsCard';
+import { IconLocation, IconAdults, IconAutomatic, IconPetrol, IconKitchen, IconBeds, IconAc } from '../Icons/Icons';
 
 const AdvertCard = ({ advert, isFavorite }) => {
+    const details = advert.details;
 
     const dispatch = useDispatch();
     const { isAuthenticated } = useAuth0();
@@ -84,7 +84,7 @@ const AdvertCard = ({ advert, isFavorite }) => {
                                     </AdvertRatingInfo>
                                 </AdvertReviewSection>
                                 <AdvertLocationSection>
-                                    <PlaceIcon />
+                                    <IconLocation />
                                     <AdvertLocation>{advert.location}</AdvertLocation>
                                 </AdvertLocationSection>
                             </AdvertSecondSection>
@@ -96,51 +96,43 @@ const AdvertCard = ({ advert, isFavorite }) => {
 
 
                         <AdvertDescriptionDetails>
-                            <DescriptionDetails>
-                                {advert.details.adults &&
-                                    <Details>
-                                        <DetailsIcon className="icon">
-                                            <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>{advert.details.adults} adults
-                                    </Details>
-                                }
-                                {advert.transmission &&
-                                    <Details>
-                                        <DetailsIcon>
-                                            <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>
-                                        <DetailsText>{advert.transmission}</DetailsText>
-                                    </Details>
-                                }
-                                {advert.engine &&
-                                    <Details>
-                                        <DetailsIcon>
-                                            <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon><DetailsText>{advert.engine}</DetailsText>
-                                    </Details>
-                                }
-                                {advert.details.kitchen &&
-                                    <Details>
-                                        <DetailsIcon>
-                                            <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>
-                                        <DetailsText>kitchen</DetailsText>
-                                    </Details>
-                                }
-                                {advert.details.beds &&
-                                    <Details>
-                                        <DetailsIcon>
-                                            <use xlinkHref="/src/icons/sprite.svg#icon-beds"></use>
-                                        </DetailsIcon>{advert.details.beds} beds
-                                    </Details>
-                                }
-                                {advert.details.airConditioner &&
-                                    <Details>
-                                        <DetailsIcon>
-                                            <use xlinkHref="/src/icons/ac.svg"></use>
-                                        </DetailsIcon>AC
-                                    </Details>
-                                }
+                        <DescriptionDetails>
+                            {advert.adults &&
+                                <Details>
+                                    <IconAdults />
+                                    {advert.adults} adults
+                                </Details>
+                            }
+                            {advert.transmission &&
+                                <Details>                                    
+                                    <IconAutomatic />
+                                    <DetailsText>{advert.transmission}</DetailsText>
+                                </Details>
+                            }
+                            {advert.engine &&
+                                <Details>
+                                    <IconPetrol />
+                                    <DetailsText>{advert.engine}</DetailsText>
+                                </Details>
+                            }
+                            {details.kitchen &&
+                                <Details>
+                                    <IconKitchen />
+                                    <DetailsText>kitchen</DetailsText>
+                                </Details>
+                            }
+                            {details.beds &&
+                                <Details>
+                                    <IconBeds />
+                                    {details.beds} beds
+                                </Details>
+                            }
+                            {details.airConditioner &&
+                                <Details>
+                                    <IconAc />
+                                    AC
+                                </Details>
+                            }
                             </DescriptionDetails>
                     </AdvertDescriptionDetails>
 

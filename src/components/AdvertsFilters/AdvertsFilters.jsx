@@ -50,8 +50,8 @@ export const AdvertsFilter = ({ onSearch }) => {
                 <label>
                     <input
                         type="checkbox"
-                        checked={selectedTransmission === 'free'}
-                        onChange={() => toggleTransmission('free')}
+                        checked={selectedTransmission === 'automatic'}
+                        onChange={() => toggleTransmission('automatic')}
                     />
                     Transmission
                 </label>
