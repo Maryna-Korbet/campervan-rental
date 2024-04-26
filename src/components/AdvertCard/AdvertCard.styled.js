@@ -92,8 +92,15 @@ export const AdvertCardDescription = styled.div`
     color: ${p => p.theme.colors.text};
 `;
 
-export const AdvertDescriptionDetails = styled.div`
-    flex-wrap: wrap;
+export const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
+        width: 24px;
+        height: 24px;
+`;
+
+export const StyledFavoriteIcon = styled(FavoriteIcon)`
+        width: 24px;
+        height: 24px;
+        color: ${p => p.theme.colors.accentColor};
 `;
 
 export const DescriptionDetails = styled.div`
@@ -120,15 +127,3 @@ export const Details = styled.div`
 export const DetailsText = styled.span` 
     text-transform: capitalize;
 `; 
-
-export const StyledFavoriteBorderIcon = styled(FavoriteBorderIcon)`
-        width: 24px;
-        height: 24px;
-`;
-
-export const StyledFavoriteIcon = styled(FavoriteIcon)`
-        width: 24px;
-        height: 24px;
-        color: ${p => p.theme.colors.accentColor};
-`;
-

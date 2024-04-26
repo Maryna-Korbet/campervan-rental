@@ -18,21 +18,17 @@ import {
     AdvertLocationSection,
     AdvertLocation,
     AdvertCardDescription,
-    AdvertDescriptionDetails,
-    DescriptionDetails,
-    Details,
-    DetailsText,
     StyledFavoriteBorderIcon,
     StyledFavoriteIcon
 } from '../AdvertCard/AdvertCard.styled';
 import { MainTitle, Button } from 'components/GlobalStyles';
+import { IconLocation } from '../Icons/Icons';
 import Modal from '../Modal/Modal';
 import DetailsCard from '../DetailsCard/DetailsCard';
-import { IconLocation, IconAdults, IconAutomatic, IconPetrol, IconKitchen, IconBeds, IconAc } from '../Icons/Icons';
+import AdvertDescriptionDetails from '../AdvertDescriptionDetails/AdvertDescriptionDetails';
+
 
 const AdvertCard = ({ advert, isFavorite }) => {
-    const details = advert.details;
-
     const dispatch = useDispatch();
     const { isAuthenticated } = useAuth0();
 
@@ -94,57 +90,17 @@ const AdvertCard = ({ advert, isFavorite }) => {
                         {advert.description}&#8230;
                     </AdvertCardDescription>
 
+                    <AdvertDescriptionDetails advert={advert} order={1}/>
 
-                        <AdvertDescriptionDetails>
-                        <DescriptionDetails>
-                            {advert.adults &&
-                                <Details>
-                                    <IconAdults />
-                                    {advert.adults} adults
-                                </Details>
-                            }
-                            {advert.transmission &&
-                                <Details>                                    
-                                    <IconAutomatic />
-                                    <DetailsText>{advert.transmission}</DetailsText>
-                                </Details>
-                            }
-                            {advert.engine &&
-                                <Details>
-                                    <IconPetrol />
-                                    <DetailsText>{advert.engine}</DetailsText>
-                                </Details>
-                            }
-                            {details.kitchen &&
-                                <Details>
-                                    <IconKitchen />
-                                    <DetailsText>kitchen</DetailsText>
-                                </Details>
-                            }
-                            {details.beds &&
-                                <Details>
-                                    <IconBeds />
-                                    {details.beds} beds
-                                </Details>
-                            }
-                            {details.airConditioner &&
-                                <Details>
-                                    <IconAc />
-                                    AC
-                                </Details>
-                            }
-                            </DescriptionDetails>
-                    </AdvertDescriptionDetails>
-
-                        <div>
-                            <Button type="button" onClick={openModal}>Show more</Button>
-                        </div>
+                    <div>
+                        <Button type="button" onClick={openModal}>Show more</Button>
+                    </div>
                     
-                        {isModalOpen && (
-                            <Modal isCloseModal={closeModal}>
-                                <DetailsCard advert={advert} />
-                            </Modal>
-                        )}
+                    {isModalOpen && (
+                        <Modal isCloseModal={closeModal}>
+                            <DetailsCard advert={advert} />
+                        </Modal>
+                    )}
 
                 </AdvertCardInfo>
             </AdvertCardItem>
