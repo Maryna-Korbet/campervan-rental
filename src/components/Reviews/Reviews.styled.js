@@ -6,6 +6,11 @@ export const ReviewsContainer = styled.div`
     margin-top: 44px;
 `;
 
+export const ReviewsContent = styled.h2`
+    display: flex;
+    gap: 22px;
+`;
+
 export const ReviewsList = styled.ul`
     display: flex;
     flex-direction: column;

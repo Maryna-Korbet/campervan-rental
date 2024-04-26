@@ -1,5 +1,6 @@
 import React from 'react';
 import RatingStar from '../RatingStar/RatingStar';
+import BookingForm from '../BookingForm/BookingForm';
 import {
     ReviewsContainer,
     ReviewsList,
@@ -11,6 +12,7 @@ import {
     ReviewerName,
     ReviewerRating,
     ReviewerСomment,
+    ReviewsContent,
 } from '../Reviews/Reviews.styled';
 
 export const Reviews = ({ setActiveButton, reviews }) => {
@@ -20,6 +22,7 @@ export const Reviews = ({ setActiveButton, reviews }) => {
 
     return (
         <ReviewsContainer onClick={handleButtonClick}>
+            <ReviewsContent>
             <ReviewsList>
                 {reviews.map((review, index) => (
                     <ReviewsItem key={index}>
@@ -44,6 +47,9 @@ export const Reviews = ({ setActiveButton, reviews }) => {
                     </ReviewsItem>
                 ))}
             </ReviewsList>
+
+            <BookingForm />
+            </ReviewsContent>
         </ReviewsContainer>
     );
 };

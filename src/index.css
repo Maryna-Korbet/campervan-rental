@@ -57,3 +57,10 @@ button{
   background-color: transparent;
 }
 
+input {
+  all: unset;
+}
+
+textarea {
+  all: unset;
+}

@@ -32,7 +32,6 @@ export const MainTitle = styled.h1`
 `;
 
 export const SecondTitle = styled.h2`
-    text-align: left;
     font-size: ${p => p.theme.fontSizes.m};
     font-weight: ${p => p.theme.fontWeights.semiBold};
     line-height: ${p => p.theme.lineHeights.h2};

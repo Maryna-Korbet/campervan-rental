@@ -21,7 +21,7 @@ export const theme = {
         label: '#10182899',
     },
     fonts: {
-        main: 'Inter, sans-serif',
+        main: 'Inter',
     },
     fontSizes: {
         xs: '14px',
