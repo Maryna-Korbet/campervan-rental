@@ -15,7 +15,7 @@ const VehicleDetails = ({ advert }) => {
             <VehicleDetailsList>
                 <VehicleDetailsItem>
                     <div>Form</div>
-                    <div><separatedLastLetter>{advert.form}</separatedLastLetter></div>
+                    <div>{advert.form}</div>
                 </VehicleDetailsItem>
                 <VehicleDetailsItem>
                     <div>Length</div>

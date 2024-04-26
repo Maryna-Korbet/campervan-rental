@@ -15,7 +15,7 @@ export const theme = {
         text: '#475467',
         buttonText: '#FFFFFF',
         accentColor: '#E44848',
-
+        
         border: '#10182833',
         borderButton:' #47546733',
         label: '#10182899',

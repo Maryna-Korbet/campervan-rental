@@ -20,22 +20,22 @@ const ModalDetails = ({ advert }) => {
                     type="button" active={activeButton === 'features' ? 'true' : 'false'}
                     onClick={() => handleButtonClick('features')}
                 >
-                Features
+                    Features
                 </DetailsButton>
                 
                 <DetailsButton
                     type="button" active={activeButton === 'reviews' ? 'true' : 'false'}
                     onClick={() => handleButtonClick('reviews')}
                 >
-                Reviews
+                    Reviews
                 </DetailsButton>
             </DetailsButtonContainer>
 
             <div>
                 {activeButton === 'features' ? (
-                <Features advert={advert} />
+                    <Features advert={advert} setActiveButton={setActiveButton} />
                 ) : (
-                <Reviews reviews={advert.reviews} />
+                    <Reviews reviews={advert.reviews} setActiveButton={setActiveButton} />
                 )}
             </div>
         </div>

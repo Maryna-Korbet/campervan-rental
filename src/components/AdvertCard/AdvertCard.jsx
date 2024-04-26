@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useDispatch } from 'react-redux';
 import { addFavoriteAdvert, removeFavoriteAdvert } from '../../redux/favorites/favoritesSlices';
-import StarIcon from '@mui/icons-material/Star';
 import {
     AdvertCardContainer,
     AdvertCardItem,
@@ -23,6 +22,7 @@ import {
 } from '../AdvertCard/AdvertCard.styled';
 import { MainTitle, Button } from 'components/GlobalStyles';
 import { IconLocation } from '../Icons/Icons';
+import RatingStar from '../RatingStar/RatingStar';
 import Modal from '../Modal/Modal';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import AdvertDescriptionDetails from '../AdvertDescriptionDetails/AdvertDescriptionDetails';
@@ -73,10 +73,10 @@ const AdvertCard = ({ advert, isFavorite }) => {
                             </AdvertMainSection>
                             <AdvertSecondSection>
                                 <AdvertReviewSection>
-                                    <StarIcon style={{ color: '#FFC531' }} />
+                                    <RatingStar />
                                     <AdvertRatingInfo>
                                         <div>{advert.rating}</div>
-                                        <div>&#10098;{advert.reviews.length} Reviews</div>
+                                        <div>&#x2772;{advert.reviews.length} Reviews&#x2773;</div>
                                     </AdvertRatingInfo>
                                 </AdvertReviewSection>
                                 <AdvertLocationSection>

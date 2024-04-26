@@ -1,6 +1,6 @@
 import React from 'react';
-import StarIcon from '@mui/icons-material/Star';
-import { IconLocation } from 'components/Icons/Icons';
+import { IconLocation } from '../Icons/Icons';
+import RatingStar from '../RatingStar/RatingStar';
 import ModalDetails  from '../ModalDetails/ModalDetails';
 import { MainTitle } from 'components/GlobalStyles';
 import {
@@ -32,7 +32,7 @@ const DetailsCard = ({ advert }) => {
                 <MainTitle>{advert.name}</MainTitle>
                 <DetailsReviewSection>
                     <AdvertReviewSection>
-                        <StarIcon style={{ color: '#FFC531' }} />
+                        <RatingStar />
                         <AdvertRatingInfo>
                             <div>{advert.rating}</div>
                             <div>&#10098;{advert.reviews.length} Reviews&#10099;</div>

@@ -54,6 +54,6 @@ button{
   outline: none;
   padding: 0;
   margin: 0;
-  font-family: inherit;
+  background-color: transparent;
 }
 

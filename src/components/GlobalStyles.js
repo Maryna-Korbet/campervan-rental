@@ -24,7 +24,6 @@ export const PageContainer = styled.div`
 `;
 
 export const MainTitle = styled.h1`
-    text-align: left;
     font-size: ${p => p.theme.fontSizes.l};
     font-weight: ${p => p.theme.fontWeights.semiBold};
     line-height: ${p => p.theme.lineHeights.h1};
