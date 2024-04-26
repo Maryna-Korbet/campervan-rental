@@ -5,14 +5,15 @@ import {
 } from '../AdvertDescriptionDetails/AdvertDescriptionDetails.styled';
 import internalComponentsOrder from '../../helpers/internalComponentsOrder';
 
-const AdvertDescriptionDetails = ({ advert, order }) => {
+const AdvertDescriptionDetails = ({ advert, order}) => {
     return (
         <AdvertDescriptionContainer>
             <DescriptionDetails>
-                {internalComponentsOrder[order](advert, advert.details)}
+                {internalComponentsOrder[order](advert)}
             </DescriptionDetails>
         </AdvertDescriptionContainer>
     );
 }
 
 export default AdvertDescriptionDetails;
+

@@ -29,6 +29,5 @@ export const DetailsButton = styled.button`
     cursor: pointer;
     position: relative;
     padding-bottom: 24px;
-    ${({ active }) => active && activeIndicatorStyles}
+    ${({ active }) => active === 'true' && activeIndicatorStyles}
 `;
-

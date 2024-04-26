@@ -28,6 +28,7 @@ export const theme = {
         s: '16px',
         m: '20px',
         l: '24px',
+        xl: '18px',
     },
     fontWeights: {
         regular: 400,
@@ -40,6 +41,7 @@ export const theme = {
         h3: 1.25,   //24/20
         main: 1.5,  //24/16
         text: 1.25, //20/16
+        details: 1.3, //24/18
         button: 1.5, //24/16
     },
     letterSpacing: {

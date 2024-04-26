@@ -1,6 +1,6 @@
 import React from 'react';
 import StarIcon from '@mui/icons-material/Star';
-import PlaceIcon from '@mui/icons-material/Place';
+import { IconLocation } from 'components/Icons/Icons';
 import ModalDetails  from '../ModalDetails/ModalDetails';
 import { MainTitle } from 'components/GlobalStyles';
 import {
@@ -39,7 +39,7 @@ const DetailsCard = ({ advert }) => {
                         </AdvertRatingInfo>
                     </AdvertReviewSection>
                     <AdvertLocationSection>
-                        <PlaceIcon />
+                        <IconLocation />
                         <AdvertLocation>{advert.location}</AdvertLocation>
                     </AdvertLocationSection>
                 </DetailsReviewSection>

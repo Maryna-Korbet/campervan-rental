@@ -12,21 +12,19 @@ const ModalDetails = ({ advert }) => {
     const handleButtonClick = buttonId => {
         setActiveButton(buttonId);
     };
-
+    
     return (
         <div>
             <DetailsButtonContainer>
                 <DetailsButton
-                    type="button"
-                    active={activeButton === 'features'}
+                    type="button" active={activeButton === 'features' ? 'true' : 'false'}
                     onClick={() => handleButtonClick('features')}
                 >
                 Features
                 </DetailsButton>
                 
                 <DetailsButton
-                    type="button"
-                    active={activeButton === 'reviews'}
+                    type="button" active={activeButton === 'reviews' ? 'true' : 'false'}
                     onClick={() => handleButtonClick('reviews')}
                 >
                 Reviews
@@ -35,7 +33,7 @@ const ModalDetails = ({ advert }) => {
 
             <div>
                 {activeButton === 'features' ? (
-                <Features data={advert} />
+                <Features advert={advert} />
                 ) : (
                 <Reviews reviews={advert.reviews} />
                 )}
