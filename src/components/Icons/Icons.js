@@ -25,14 +25,14 @@ import water from '../../icons/water.svg';
 
 export const IconAdults = () => <img src={adults} alt='adults' width={20} height={20} />
 export const IconAc = () => <img src={ac} alt='ac' width={20} height={20} />
-export const IconAlcove = () => <img src={alcove} alt='alcove' width={20} height={20} />
+export const IconAlcove = () => <img src={alcove} alt='alcove' width={40} height={28} />
 export const IconAutomatic = () => <img src={automatic} alt='automatic' width={20} height={20} />
 export const IconBeds = () => <img src={beds} alt='beds' width={20} height={20} />
 export const IconCalendar = () => <img src={calendar} alt='calendar' width={20} height={20} />
 export const IconCd = () => <img src={cd} alt='cd' width={20} height={20} />
 export const IconConditioner = () => <img src={conditioner} alt='conditioner' width={20} height={20} />
 export const IconFreezer = () => <img src={freezer} alt='freezer' width={20} height={20} />
-export const IconFullyIntegrated = () => <img src={fullyIntegrated} alt='fully-integrated' width={20} height={20} />
+export const IconFullyIntegrated = () => <img src={fullyIntegrated} alt='fully-integrated' width={40} height={28} />
 export const IconGas = () => <img src={gas} alt='gas' width={20} height={20} />
 export const IconHob = () => <img src={hob} alt='hob' width={20} height={20} />
 export const IconKitchen = () => <img src={kitchen} alt='kitchen' width={20} height={20} />
@@ -43,5 +43,5 @@ export const IconRadio = () => <img src={radio} alt='radio' width={20} height={2
 export const IconShower = () => <img src={shower} alt='shower' width={20} height={20} />
 export const IconToiletPaper = () => <img src={toiletPaper} alt='toilet-paper' width={20} height={20} />
 export const IconTv = () => <img src={tv} alt='tv' width={20} height={20} />
-export const IconVan = () => <img src={van} alt='van' width={20} height={20} />
+export const IconVan = () => <img src={van} alt='van' width={40} height={28} />
 export const IconWater = () => <img src={water} alt='water' width={20} height={20} />

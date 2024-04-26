@@ -62,6 +62,7 @@ export const FormButton = styled.button`
     height: 56px;
     padding: 16px 60px 16px 60px;
     border-radius: ${p => p.theme.radius.l};
+    cursor: pointer;
 
     font-family: ${p => p.theme.fonts.main};
     color: ${p => p.theme.colors.buttonText};

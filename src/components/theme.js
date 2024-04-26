@@ -36,13 +36,13 @@ export const theme = {
         semiBold: 600,
     },
     lineHeights: {
-        h1: 1.25,   //30/24
-        h2: 1.2,    //24/20
-        h3: 1.25,   //24/20
-        main: 1.5,  //24/16
-        text: 1.25, //20/16
-        details: 1.3, //24/18
-        button: 1.5, //24/16
+        h1: 1.25,   
+        h2: 1.2,    
+        h3: 1.25,  
+        main: 1.5, 
+        text: 1.25, 
+        details: 1.3, 
+        button: 1.5, 
     },
     letterSpacing: {
         button: '-0.005em',
