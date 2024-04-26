@@ -1,5 +1,4 @@
-<div align="center" id="top"> 
-  <img src="../campervan-rental/src/icons/alcove.svg" alt="Rental Campers App" width="100"/>
+<div align="center" id="top">
 
 &#xa0;
 
@@ -8,11 +7,11 @@
 <h1 align="center">Rental Campers App</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Maryna-Korbet/campervan-rental/tree/main?color=FF8C00">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/Maryna-Korbet/campervan-rental?color=FF8C00">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Maryna-Korbet/campervan-rental/tree/main?color=FF8C00">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/Maryna-Korbet/campervan-rental?color=FF8C00">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Maryna-Korbet/campervan-rental/tree/main?color=FF8C00">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Maryna-Korbet/campervan-rental?color=FF8C00">
 </p>
 
 <p align="center">
