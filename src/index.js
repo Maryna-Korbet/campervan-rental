@@ -11,7 +11,6 @@ import './index.css';
 import { theme } from 'components/theme';
 import StatefulAuth0Provider from 'auth/StatefulAuth0Provider';
 import ErrorBoundary from 'components/ErrorBoundary/ErrorBoundary';
-// import LinearProgress from 'components/LinearProgress/LinearProgress';
 
 
 const HomePage = lazy(() => import('pages/HomePage'));
